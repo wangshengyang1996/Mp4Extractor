@@ -61,11 +61,10 @@ public class Mp4Decoder {
     }
 
     private void showSupportedColorFormat(MediaCodecInfo.CodecCapabilities caps) {
-        System.out.print("supported color format: ");
+        Log.i(TAG, "showSupportedColorFormat: ");
         for (int c : caps.colorFormats) {
-            System.out.print(c + "\t");
+            Log.i(TAG, "showSupportedColorFormat: " + c);
         }
-        System.out.println();
     }
 
     private boolean isColorFormatSupported(int colorFormat, MediaCodecInfo.CodecCapabilities caps) {
